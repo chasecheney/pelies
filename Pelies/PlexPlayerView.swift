@@ -1747,7 +1747,7 @@ private struct BrowseView: View {
         }
         .padding(.leading, 12).padding(.vertical, 8)
         .padding(.trailing, 12)
-        .background(.bar)
+        .barBackground()
     }
 }
 
@@ -2469,7 +2469,7 @@ private struct MiniPlayerBar: View {
             Button { model.closePlayer() } label: { Image(systemName: "xmark").font(.title3) }
                 .buttonStyle(.plain)
         }
-        .padding(8).background(.bar).overlay(alignment: .top) { Divider() }
+        .padding(8).barBackground().overlay(alignment: .top) { Divider() }
         .contentShape(Rectangle())
         .onTapGesture { model.expandPlayer() }
     }

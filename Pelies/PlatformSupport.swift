@@ -52,3 +52,15 @@ enum SystemBrowser {
         #endif
     }
 }
+
+extension View {
+    /// Toolbar-style backdrop: the bar material on macOS, a solid dark tone
+    /// on tvOS (materials are unavailable there).
+    func barBackground() -> some View {
+        #if os(macOS)
+        return background(.bar)
+        #else
+        return background(Color(red: 0.11, green: 0.11, blue: 0.12))
+        #endif
+    }
+}
